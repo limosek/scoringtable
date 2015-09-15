@@ -5,6 +5,10 @@ Main purpose of it is to demonstrate what is possible to do with sdcc and small 
 
 Feel free to use :)
 
+## Schema
+
+Schema is explained in png files. There are two boxes. One sender with buttons and another receiver (table) with LCD segments.
+
 # Licence
 GPL 3.0
 
