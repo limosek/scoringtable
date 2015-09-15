@@ -1,0 +1,52 @@
+@startuml
+
+node PIC16F84 {
+	() "PIC port 5 bit 0" as P5.0
+	() "PIC port 5 bit 1" as P5.1
+	() "PIC port 5 bit 2" as P5.2
+	() "PIC port 5 bit 3" as P5.3
+	() "PIC port 5 bit 4" as P5.4
+
+	() "PIC port 6 bit 0" as P6.0
+	() "PIC port 6 bit 1" as P6.1
+	() "PIC port 6 bit 2" as P6.2
+	() "PIC port 6 bit 3" as P6.3
+	() "PIC port 6 bit 4" as P6.4
+	() "PIC port 6 bit 5" as P6.5
+	() "PIC port 6 bit 6" as P6.6
+	() "PIC port 6 bit 7" as P6.7
+}
+
+node Table {
+	() "Select segment 1" AS SS1
+	() "Select segment 2" AS SS2
+	() "Select segment 3" AS SS3
+	() "Select segment 4" AS SS4
+
+	() "Segment bit A"    AS SBA
+	() "Segment bit B"    AS SBB
+	() "Segment bit C"    AS SBC
+	() "Segment bit D"    AS SBD
+	() "Segment bit E"    AS SBE
+	() "Segment bit F"    AS SBF
+	() "Segment bit G"    AS SBG
+
+	() "Serial input"     AS RX
+}
+
+P5.0 -- SS4
+P5.1 -- SS3
+P5.2 -- SS2
+P5.3 -- SS1
+
+P6.7 -- RX
+
+P6.0 -- SBG
+P6.1 -- SBC
+P6.2 -- SBD
+P6.3 -- SBE
+P6.4 -- SBB
+P6.5 -- SBF
+P6.6 -- SBA
+
+@enduml

@@ -1,0 +1,39 @@
+@startuml
+
+node PIC16F84 {
+	() "PIC port 5 bit 0" as P5.0
+	() "PIC port 5 bit 1" as P5.1
+	() "PIC port 5 bit 2" as P5.2
+	() "PIC port 5 bit 3" as P5.3
+	() "PIC port 5 bit 4" as P5.4
+	() "PIC port 6 bit 7" as P6.7
+}
+
+node Buttons {
+
+	() "Button select" as BS
+	() "Button input 1" as BI1
+	() "Button input 2" as BI2
+	() "Button input 3" as BI3
+	() "Button input 4" as BI4
+
+	() "Serial output"     AS TX
+
+}
+
+P5.0 -- BI1
+P5.1 -- BI2
+P5.2 -- BI3
+P5.3 -- BI4
+P5.4 -- BS
+
+P6.7 -- TX
+
+note left of BS
+	Button select + Button input 1 - Add score for home
+	Button select + Button input 2 - Dec score for home
+	Button select + Button input 3 - Add score for visitors
+	Button select + Button input 4 - Dec score for visitors
+end note
+
+@enduml
